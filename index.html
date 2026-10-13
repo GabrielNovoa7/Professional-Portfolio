@@ -1,22 +1,19 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Basic page setup -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Gabriel Novoa, UHD Computer Science student graduating December 2026. Explore Android, AI-assisted learning, web, and C++ projects."
+    />
+    <title>Gabriel Novoa | Software Development Portfolio</title>
 
-    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Browser tab icon -->
     <link
       rel="icon"
       href="images/gear-brain-human-head-icon-png-favpng-Fr136fEFGXNsW7FVZz6dCSSZD.jpg"
     />
-
-    <title>Gabriel Novoa's Resume Website</title>
-
-    <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,22 +23,30 @@
   </head>
 
   <body>
-    <!-- =================================
-         HEADER
-         Name, short intro, and social links
-    ================================== -->
     <header>
       <h1>Gabriel Novoa</h1>
       <p>
-        Computer Science Student @ University of Houston–Downtown | Aspiring
-        Software Engineer<br />
-        Building practical software solutions through C++, Python, and web
-        development.
+        Computer Science student at University of Houston-Downtown · Graduating
+        December 2026
       </p>
+      <p>
+        Building Android, web, and C++ applications. Seeking software
+        development internships and entry-level opportunities.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button-link" href="#myProjects">View Projects</a>
+        <a
+          class="button-link secondary"
+          href="pdfFolder/GabrielNovoa_FinalResume.pdf"
+          download
+        >
+          Download Resume
+        </a>
+      </div>
 
       <div class="socialWrapper">
         <div class="socialcard">
-          <!-- LinkedIn -->
           <a
             href="https://www.linkedin.com/in/gabriel-novoa972/"
             target="_blank"
@@ -49,14 +54,13 @@
             class="socialContainer linkedin"
             aria-label="LinkedIn Profile"
           >
-            <svg viewBox="0 0 448 512" class="socialSvg">
+            <svg viewBox="0 0 448 512" class="socialSvg" aria-hidden="true">
               <path
                 d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
               />
             </svg>
           </a>
 
-          <!-- GitHub -->
           <a
             href="https://github.com/GabrielNovoa7"
             target="_blank"
@@ -64,20 +68,19 @@
             class="socialContainer github"
             aria-label="GitHub Profile"
           >
-            <svg viewBox="0 0 496 512" class="socialSvg">
+            <svg viewBox="0 0 496 512" class="socialSvg" aria-hidden="true">
               <path
                 d="M248 8C111 8 0 119 0 256c0 110 71 203 169 236 12 2 16-5 16-11v-39c-69 15-84-29-84-29-11-28-27-35-27-35-22-15 2-15 2-15 24 2 37 25 37 25 22 37 57 26 71 20 2-16 9-26 16-32-55-6-113-27-113-120 0-27 10-49 25-66-2-6-11-31 2-65 0 0 20-6 66 25 19-5 39-8 59-8s40 3 59 8c46-31 66-25 66-25 13 34 4 59 2 65 16 17 25 39 25 66 0 93-58 114-113 120 9 8 17 23 17 47v70c0 6 4 13 16 11 98-33 169-126 169-236C496 119 385 8 248 8z"
               />
             </svg>
           </a>
 
-          <!-- Email -->
           <a
             href="mailto:Novoa.Gabriel@outlook.com"
             class="socialContainer email"
             aria-label="Email Gabriel"
           >
-            <svg viewBox="0 0 512 512" class="socialSvg">
+            <svg viewBox="0 0 512 512" class="socialSvg" aria-hidden="true">
               <path
                 d="M502.3 190.8L327.4 338c-15.8 13.3-38.9 13.3-54.7 0L9.7 190.8C3.9 186 0 178.9 0 171.3V112c0-26.5 21.5-48 48-48h416c26.5 0 48 21.5 48 48v59.3c0 7.6-3.9 14.7-9.7 19.5zM0 224l187.7 157.9c39.2 32.9 97.4 32.9 136.6 0L512 224v176c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V224z"
               />
@@ -88,16 +91,8 @@
     </header>
 
     <main>
-      <!-- =================================
-           WEBSITE DIRECTORY / IN-PAGE NAV
-      ================================== -->
-      <section id="NavigationBar">
-        <h2>Website Directory</h2>
-        <h3>
-          Click on any one of the headings to quickly nagivate to the selected
-          section
-        </h3>
-        <nav>
+      <div id="NavigationBar">
+        <nav aria-label="Portfolio sections">
           <a href="#aboutMe">About Me</a>
           <a href="#skills">Skills</a>
           <a href="#certifications">Certifications</a>
@@ -105,209 +100,253 @@
           <a href="#workingOn">Currently Working On</a>
           <a href="#myResume">Resume</a>
         </nav>
-      </section>
+      </div>
 
-      <!-- =================================
-           ABOUT ME
-      ================================== -->
       <section id="aboutMe">
         <h2>About Me</h2>
-
         <p>
-          Hi! My name is Gabriel Novoa, and I’m a Computer Science major at the
-          University of Houston–Downtown. I’m passionate about technology,
-          learning new skills, and building real-world projects that reflect
-          what I’ve learned.
+          I’m a Computer Science student at the University of Houston-Downtown,
+          graduating in December 2026. I build Android, web, and C++
+          applications and am seeking software development internships and
+          entry-level opportunities.
         </p>
-
         <p>
-          Over the past few semesters, I’ve gained experience in Python and C++,
-          and I’ve worked on projects such as an Employee Absence Management
-          System, this resume website, and I’m currently working on a
-          weather-based web app.
+          My projects include CS Textbook Tutor, an AI-assisted learning
+          application built with React, TypeScript, FastAPI, and the OpenAI API,
+          and MuscleMetrics, an Android workout tracker built with Java, Room,
+          and SQLite. These projects have given me experience with persistent
+          storage, API integration, and building features around user needs.
         </p>
-
         <p>
-          Outside of academics, I’m into gaming, anime, fitness, and financial
-          literacy. I’m exploring software development, cybersecurity, and
-          UI/UX. My goal is to build a career where I can be creative, solve
-          problems, and grow fast.
+          Alongside my studies, my customer service and team management
+          experience has strengthened my communication, organization, and
+          teamwork. Outside of coding, I enjoy gaming, fitness, and learning new
+          skills.
         </p>
       </section>
 
-      <!-- =================================
-           SKILLS
-      ================================== -->
       <section id="skills">
         <h2>Skills</h2>
 
-        <h3>Spoken Languages</h3>
-
-        <div class="skill-bar">
-          <span>English</span>
-          <div class="bar"><div class="fill" style="width: 100%"></div></div>
-        </div>
-
-        <div class="skill-bar">
-          <span>Spanish</span>
-          <div class="bar"><div class="fill" style="width: 70%"></div></div>
-        </div>
-
-        <h3>Coding Languages</h3>
-
-        <div class="skill-bar">
-          <span>C++</span>
-          <div class="bar"><div class="fill" style="width: 60%"></div></div>
-        </div>
-
-        <div class="skill-bar">
-          <span>Python</span>
-          <div class="bar"><div class="fill" style="width: 55%"></div></div>
-        </div>
-
-        <div class="skill-bar">
-          <span>HTML</span>
-          <div class="bar"><div class="fill" style="width: 10%"></div></div>
-        </div>
-
-        <div class="skill-bar">
-          <span>CSS</span>
-          <div class="bar"><div class="fill" style="width: 10%"></div></div>
-        </div>
-
-        <div class="skill-bar">
-          <span>SQL</span>
-          <div class="bar"><div class="fill" style="width: 15%"></div></div>
-        </div>
-
-        <h3>Python Packages</h3>
+        <h3>Languages</h3>
         <div class="tag-container">
+          <span class="tag">Java</span>
+          <span class="tag">Python</span>
+          <span class="tag">C++</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">SQL</span>
+        </div>
+
+        <h3>Frameworks &amp; Libraries</h3>
+        <div class="tag-container">
+          <span class="tag">React</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">Android SDK</span>
+          <span class="tag">Room</span>
           <span class="tag">Pandas</span>
           <span class="tag">NumPy</span>
           <span class="tag">Matplotlib</span>
         </div>
+
+        <h3>Tools &amp; Databases</h3>
+        <div class="tag-container">
+          <span class="tag">Git</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">Android Studio</span>
+          <span class="tag">Visual Studio Code</span>
+          <span class="tag">SQLite</span>
+        </div>
+
+        <h3>Spoken Languages</h3>
+        <p>English · Spanish</p>
       </section>
 
-      <!-- =================================
-           PROJECTS
-      ================================== -->
       <section id="myProjects">
         <h2>My Projects</h2>
 
         <div class="project-grid">
-          <article class="project-card">
-            <h3>MuscleMetrics (Java/XML)</h3>
+          <article class="project-card featured-project">
+            <span class="project-label">AI &amp; WEB DEVELOPMENT</span>
+            <h3>CS Textbook Tutor</h3>
             <p>
-              A workout tracking Android app designed to make logging and
-              reviewing workouts simple. Users can create workouts, add
-              exercises and sets, track weight and reps, and view saved workout
-              history and progress metrics. Built with Java, XML, and Room for
-              persistent local data storage.
+              An AI-assisted learning application that uses semantic retrieval
+              and vector embeddings to ground responses in uploaded textbook
+              content. Includes PDF processing, persistent chats, practice
+              questions, and a Java code playground.
             </p>
+
+            <div class="tag-container">
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">OpenAI API</span>
+            </div>
+
             <a
-              href="pdfFolder/Final_Project_HCI_GabrielNovoa.pdf"
+              href="https://github.com/GabrielNovoa7/cs-textbook-tutor"
               target="_blank"
               rel="noopener"
             >
-              Project Final Paper
+              View Source on GitHub
             </a>
+          </article>
+
+          <article class="project-card">
+            <span class="project-label">ANDROID DEVELOPMENT</span>
+            <h3>MuscleMetrics</h3>
+            <p>
+              A workout tracking Android app for logging workouts, exercises,
+              sets, weight, and reps. Includes saved workout history and
+              progress metrics, with persistent local storage using Room and
+              SQLite.
+            </p>
+
+            <div class="tag-container">
+              <span class="tag">Java</span>
+              <span class="tag">XML</span>
+              <span class="tag">Android SDK</span>
+              <span class="tag">Room</span>
+              <span class="tag">SQLite</span>
+            </div>
+
             <a
               href="https://github.com/GabrielNovoa7/MuscleMetrics"
               target="_blank"
               rel="noopener"
             >
-              GitHub Repository
+              View Source on GitHub
+            </a>
+            <a
+              href="pdfFolder/Final_Project_HCI_GabrielNovoa.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              Read Project Paper
             </a>
           </article>
 
           <article class="project-card">
-            <h3>Resume Website (HTML/CSS)</h3>
+            <span class="project-label">WEB DEVELOPMENT</span>
+            <h3>Portfolio Website</h3>
             <p>
-              A personal portfolio website built using HTML and CSS to showcase
-              projects, skills, and ongoing work. Designed with responsive
-              layout principles and hosted using GitHub Pages.
+              A responsive personal portfolio showcasing my software projects,
+              technical skills, certifications, and resume. Built with HTML and
+              CSS and deployed through GitHub Pages with a custom domain.
             </p>
+
+            <div class="tag-container">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Responsive Design</span>
+              <span class="tag">GitHub Pages</span>
+            </div>
+
             <a
-              href="https://github.com/GabrielNovoa7/GabrielNovoa7.github.io"
+              href="https://github.com/GabrielNovoa7/Professional-Portfolio"
               target="_blank"
               rel="noopener"
             >
-              GitHub Repository
+              View Source on GitHub
             </a>
           </article>
 
           <article class="project-card">
-            <h3>Employee Absence Management System (C++)</h3>
+            <span class="project-label">C++ APPLICATION DEVELOPMENT</span>
+            <h3>Employee Absence Management System</h3>
             <p>
-              A console-based system that allows users to add, update, delete,
-              and search employee absence records using file I/O and
-              object-oriented programming principles.
+              A console-based application for adding, updating, deleting, and
+              searching employee absence records. Uses classes, structs, and
+              modular functions, with file-based persistence.
             </p>
-            <a
-              href="pdfFolder/C++ Final Project Research Paper - Copy.pdf"
-              target="_blank"
-              rel="noopener"
-            >
-              Research Paper (PDF)
-            </a>
+
+            <div class="tag-container">
+              <span class="tag">C++</span>
+              <span class="tag">Object-Oriented Programming</span>
+              <span class="tag">File I/O</span>
+              <span class="tag">CRUD Operations</span>
+            </div>
+
             <a
               href="https://github.com/GabrielNovoa7/Employee-Absence-Management-System"
               target="_blank"
               rel="noopener"
             >
-              GitHub Repository
+              View Source on GitHub
+            </a>
+            <a
+              href="pdfFolder/C++ Final Project Research Paper - Copy.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              Read Project Paper
             </a>
           </article>
 
           <article class="project-card">
-            <h3>Drone Technology Presentation (Student Leader)</h3>
+            <span class="project-label">STEM OUTREACH</span>
+            <h3>Drone Technology Workshop</h3>
             <p>
-              Delivered a presentation on drone technology to high school
-              students as part of a university outreach initiative. Discussed
-              real-world applications of drones and introduced students to
-              potential career paths in technology.
+              Collaborated with UHD students to deliver a one-day drone workshop
+              at Yates High School. Introduced students to drone technology,
+              flight concepts, and real-world applications through hands-on
+              activities.
             </p>
+
+            <div class="tag-container">
+              <span class="tag">STEM Education</span>
+              <span class="tag">Public Speaking</span>
+              <span class="tag">Teamwork</span>
+              <span class="tag">Workshop Facilitation</span>
+            </div>
+
             <a
               href="https://www.linkedin.com/posts/gabriel-novoa972_it-was-my-pleasure-to-work-as-a-student-leader-activity-7316616575153852416-AxiH"
               target="_blank"
               rel="noopener"
             >
-              View LinkedIn Post
+              View Workshop on LinkedIn
             </a>
           </article>
 
           <article class="project-card">
-            <h3>Console Based Rock Paper Scissors Game (C++)</h3>
+            <span class="project-label">C++ GAME DEVELOPMENT</span>
+            <h3>Rock Paper Scissors</h3>
             <p>
-              A console-based Rock Paper Scissors game built in C++ that allows
-              users to play against the computer using randomized outcomes and
-              conditional logic.
+              A console-based game that lets users play against the computer.
+              Uses randomized outcomes and conditional logic, with a multi-file
+              structure separating headers and source files.
             </p>
+
+            <div class="tag-container">
+              <span class="tag">C++</span>
+              <span class="tag">Game Logic</span>
+              <span class="tag">Randomization</span>
+              <span class="tag">Multi-File Structure</span>
+            </div>
+
             <a
               href="https://github.com/GabrielNovoa7/Rock-Paper-Scissors"
               target="_blank"
               rel="noopener"
             >
-              GitHub Repository
+              View Source on GitHub
             </a>
           </article>
         </div>
       </section>
-      <!-- =================================
-           Certificates and Certifications
-      ================================== -->
+
       <section id="certifications">
         <h2>Certifications</h2>
-
-        <h3>
-          Credentials that validate technical skills and continuous learning.
-        </h3>
+        <p>Courses supporting my technical skills and continued learning.</p>
 
         <div class="cert-grid">
           <article class="cert-card">
-            <h3>Introduction to python</h3>
+            <h3>Introduction to Python</h3>
             <p class="cert-meta">Issued by DataCamp</p>
-            <p class="cert-meta">Completed: Febuary 2026</p>
+            <p class="cert-meta">Completed: February 2026</p>
             <div class="cert-tags">
               <span class="cert-tag">Python</span>
               <span class="cert-tag">Dictionaries</span>
@@ -315,11 +354,12 @@
               <span class="cert-tag">Programming Fundamentals</span>
             </div>
             <a
-              href="pdfFolder\Introduction to Python.pdf"
+              href="pdfFolder/Introduction to Python.pdf"
               target="_blank"
               rel="noopener"
-              >Verify Credential</a
             >
+              Verify Credential
+            </a>
           </article>
 
           <article class="cert-card">
@@ -332,15 +372,16 @@
               <span class="cert-tag">List Comprehensions</span>
             </div>
             <a
-              href="pdfFolder\Intermediate Python.pdf"
+              href="pdfFolder/Intermediate Python.pdf"
               target="_blank"
               rel="noopener"
-              >Verify Credential</a
             >
+              Verify Credential
+            </a>
           </article>
 
           <article class="cert-card">
-            <h3>Introdcution to SQL</h3>
+            <h3>Introduction to SQL</h3>
             <p class="cert-meta">Issued by DataCamp</p>
             <p class="cert-meta">Completed: March 2026</p>
             <div class="cert-tags">
@@ -349,11 +390,12 @@
               <span class="cert-tag">Filtering Data</span>
             </div>
             <a
-              href="pdfFolder\Introduction to SQL.pdf"
+              href="pdfFolder/Introduction to SQL.pdf"
               target="_blank"
               rel="noopener"
-              >Verify Credential</a
             >
+              Verify Credential
+            </a>
           </article>
 
           <article class="cert-card">
@@ -362,15 +404,16 @@
             <p class="cert-meta">Completed: April 2026</p>
             <div class="cert-tags">
               <span class="cert-tag">SQL</span>
-              <span class="cert-tag">Databases Design</span>
+              <span class="cert-tag">Database Design</span>
               <span class="cert-tag">Filtering Data</span>
             </div>
             <a
-              href="pdfFolder\Intermediate SQL.pdf"
+              href="pdfFolder/Intermediate SQL.pdf"
               target="_blank"
               rel="noopener"
-              >Verify Credential</a
             >
+              Verify Credential
+            </a>
           </article>
 
           <article class="cert-card">
@@ -383,34 +426,34 @@
               <span class="cert-tag">NumPy</span>
             </div>
             <a
-              href="pdfFolder\Data Manipulation with pandas.pdf"
+              href="pdfFolder/Data Manipulation with pandas.pdf"
               target="_blank"
               rel="noopener"
-              >Verify Credential</a
             >
+              Verify Credential
+            </a>
           </article>
 
           <article class="cert-card">
-            <h3>Introduction to Data Visualization using Matplotlib</h3>
+            <h3>Introduction to Data Visualization with Matplotlib</h3>
             <p class="cert-meta">Issued by DataCamp</p>
             <p class="cert-meta">Completed: April 2026</p>
-            <div>
+            <div class="cert-tags">
               <span class="cert-tag">Python</span>
               <span class="cert-tag">Matplotlib</span>
               <span class="cert-tag">Data Visualization</span>
             </div>
             <a
-              href="pdfFolder\Introduction to Data Visualization with Matplotlib.pdf"
+              href="pdfFolder/Introduction to Data Visualization with Matplotlib.pdf"
               target="_blank"
               rel="noopener"
-              >Verify Credential</a
             >
+              Verify Credential
+            </a>
           </article>
         </div>
       </section>
-      <!-- =================================
-           CURRENTLY WORKING ON
-      ================================== -->
+
       <section id="workingOn">
         <h2>Currently Working On</h2>
 
@@ -435,100 +478,88 @@
         </div>
       </section>
 
-      <!-- =================================
-           RESUME PREVIEW
-      ================================== -->
       <section id="myResume">
         <h2>My Resume</h2>
 
         <iframe
-          src="pdfFolder\Gabriel_Novoa_Resume_final.pdf"
+          src="pdfFolder/GabrielNovoa_FinalResume.pdf"
           width="100%"
-          height="600px"
-          style="border-radius: 10px; border: none"
+          height="600"
           title="Gabriel Novoa Resume Preview"
+          loading="lazy"
         ></iframe>
 
-        <p style="text-align: center; margin-top: 10px">
-          <a href="pdfFolder/Resume_FinalDraft_Novoa.pdf" target="_blank">
-            Open / Download Resume (PDF)
+        <p class="resume-link">
+          <a
+            href="pdfFolder/GabrielNovoa_FinalResume.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            Open Resume (PDF)
+          </a>
+          <a href="pdfFolder/GabrielNovoa_FinalResume.pdf" download>
+            Download Resume
           </a>
         </p>
       </section>
-      <!-- =================================
-           Feedback section
-      ================================== -->
+
       <section id="feedback">
         <h2>Feedback</h2>
-
         <p>
           Have suggestions or ideas? I'd appreciate any feedback on my website.
         </p>
 
         <form action="https://formspree.io/f/mkopbkkv" method="POST">
-          <label>Name</label>
-          <input type="text" name="name" required />
+          <label for="feedback-name">Name</label>
+          <input
+            id="feedback-name"
+            type="text"
+            name="name"
+            autocomplete="name"
+            required
+          />
 
-          <label>Email</label>
-          <input type="email" name="email" required />
+          <label for="feedback-email">Email</label>
+          <input
+            id="feedback-email"
+            type="email"
+            name="email"
+            autocomplete="email"
+            required
+          />
 
-          <label>Message</label>
-          <textarea name="message" rows="5" required></textarea>
+          <label for="feedback-message">Message</label>
+          <textarea
+            id="feedback-message"
+            name="message"
+            rows="5"
+            required
+          ></textarea>
 
           <button type="submit">Send Feedback</button>
         </form>
       </section>
     </main>
 
-    <!-- =================================
-         FOOTER
-    ================================== -->
     <footer>
       <p>Thank you for visiting!</p>
-
-      <div class="socialWrapper">
-        <div class="socialcard">
-          <a
-            href="https://www.linkedin.com/in/gabriel-novoa972/"
-            target="_blank"
-            rel="noopener"
-            class="socialContainer linkedin"
-            aria-label="LinkedIn Profile"
-          >
-            <svg viewBox="0 0 448 512" class="socialSvg">
-              <path
-                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-              />
-            </svg>
-          </a>
-
-          <a
-            href="https://github.com/GabrielNovoa7"
-            target="_blank"
-            rel="noopener"
-            class="socialContainer github"
-            aria-label="GitHub Profile"
-          >
-            <svg viewBox="0 0 496 512" class="socialSvg">
-              <path
-                d="M248 8C111 8 0 119 0 256c0 110 71 203 169 236 12 2 16-5 16-11v-39c-69 15-84-29-84-29-11-28-27-35-27-35-22-15 2-15 2-15 24 2 37 25 37 25 22 37 57 26 71 20 2-16 9-26 16-32-55-6-113-27-113-120 0-27 10-49 25-66-2-6-11-31 2-65 0 0 20-6 66 25 19-5 39-8 59-8s40 3 59 8c46-31 66-25 66-25 13 34 4 59 2 65 16 17 25 39 25 66 0 93-58 114-113 120 9 8 17 23 17 47v70c0 6 4 13 16 11 98-33 169-126 169-236C496 119 385 8 248 8z"
-              />
-            </svg>
-          </a>
-
-          <a
-            href="mailto:Novoa.Gabriel@outlook.com"
-            class="socialContainer email"
-            aria-label="Email Gabriel"
-          >
-            <svg viewBox="0 0 512 512" class="socialSvg">
-              <path
-                d="M502.3 190.8L327.4 338c-15.8 13.3-38.9 13.3-54.7 0L9.7 190.8C3.9 186 0 178.9 0 171.3V112c0-26.5 21.5-48 48-48h416c26.5 0 48 21.5 48 48v59.3c0 7.6-3.9 14.7-9.7 19.5zM0 224l187.7 157.9c39.2 32.9 97.4 32.9 136.6 0L512 224v176c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V224z"
-              />
-            </svg>
-          </a>
-        </div>
-      </div>
+      <nav class="footer-links" aria-label="Social links">
+        <a
+          href="https://www.linkedin.com/in/gabriel-novoa972/"
+          target="_blank"
+          rel="noopener"
+        >
+          LinkedIn
+        </a>
+        <a
+          href="https://github.com/GabrielNovoa7"
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub
+        </a>
+        <a href="mailto:Novoa.Gabriel@outlook.com">Email</a>
+      </nav>
     </footer>
   </body>
 </html>

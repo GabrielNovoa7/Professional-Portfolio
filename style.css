@@ -1,8 +1,4 @@
-/* =================================
-  THEME TOKENS
-  Centralized colors, surfaces,
-  and shared visual constants.
-================================= */
+/* Theme */
 :root {
   --bg-1: #02060d;
   --bg-2: #060d18;
@@ -18,18 +14,14 @@
   --shadow: 0 22px 42px rgba(0, 0, 0, 0.58);
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-/* Apply consistent box model sizing */
 * {
   box-sizing: border-box;
 }
 
-/* =================================
-   PAGE BACKDROP + BASE TYPE
-================================= */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 22px 14px;
@@ -37,9 +29,22 @@ body {
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
   line-height: 1.65;
   background:
-    radial-gradient(circle at 10% 16%, rgba(77, 183, 255, 0.16), transparent 45%),
-    radial-gradient(circle at 86% 8%, rgba(120, 146, 198, 0.14), transparent 42%),
-    linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 45%, var(--bg-3) 100%);
+    radial-gradient(
+      circle at 10% 16%,
+      rgba(77, 183, 255, 0.16),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 86% 8%,
+      rgba(120, 146, 198, 0.14),
+      transparent 42%
+    ),
+    linear-gradient(
+      135deg,
+      var(--bg-1) 0%,
+      var(--bg-2) 45%,
+      var(--bg-3) 100%
+    );
   background-attachment: fixed;
 }
 
@@ -48,22 +53,24 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 48px 48px;
   mask-image: radial-gradient(circle at center, black 38%, transparent 92%);
 }
 
-/* Main content container */
 main {
   max-width: 960px;
   margin: 0 auto;
   padding: 4px;
 }
 
-/* =================================
-  TYPOGRAPHY
-================================= */
+section {
+  scroll-margin-top: 20px;
+}
+
+/* Typography */
 h1 {
   margin: 0;
   font-size: clamp(2.25rem, 5vw, 3.25rem);
@@ -92,9 +99,9 @@ p {
 
 a {
   color: var(--accent-warm);
-  margin: 7px;
   font-weight: 700;
   text-underline-offset: 3px;
+  overflow-wrap: anywhere;
   transition: color 0.18s ease;
 }
 
@@ -102,63 +109,32 @@ a:hover {
   color: #d8e9ff;
 }
 
-ul {
-  padding-left: 22px;
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent-warm);
+  outline-offset: 4px;
 }
 
-li {
-  margin-bottom: 14px;
-}
-
-#myProjects li {
-  margin-bottom: 24px;
-}
-
-/* =================================
-   SHARED SECTION CARD STYLE
-   Applies to all major page blocks.
-================================= */
+/* Main section cards */
 header,
 footer,
-#feedback,
 #NavigationBar,
-#aboutMe,
-#skills,
-#certifications,
-#myProjects,
-#workingOn,
-#myResume {
+main > section {
   max-width: 960px;
   margin: 16px auto;
   padding: 22px;
   border-radius: 20px;
   border: 1px solid var(--border);
   color: var(--text-main);
-  background: linear-gradient(180deg, rgba(10, 19, 35, 0.76), var(--surface));
+  background: linear-gradient(
+    180deg,
+    rgba(10, 19, 35, 0.76),
+    var(--surface)
+  );
   box-shadow: var(--shadow);
   backdrop-filter: blur(8px);
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-header:hover,
-footer:hover,
-#feedback:hover,
-#NavigationBar:hover,
-#aboutMe:hover,
-#skills:hover,
-#certifications:hover,
-.project-card:hover,
-.cert-card:hover,
-.workingOn-card:hover,
-#myProjects:hover,
-#workingOn:hover,
-#myResume:hover {
-  transform: translateY(-3px);
-  border-color: rgba(138, 178, 230, 0.6);
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.62);
-}
-
-/* Header-specific tweaks */
 header {
   text-align: center;
   padding: 30px 22px;
@@ -172,18 +148,46 @@ header p {
 
 footer {
   text-align: center;
-  font-size: 1.1rem;
 }
 
-/* =================================
-   NAVIGATION
-================================= */
-nav {
-  margin: 12px 0 6px;
+/* Main buttons */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 24px 0;
 }
 
+.button-link {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: var(--accent-warm);
+  color: #04101c;
+  text-decoration: none;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+
+.button-link:hover {
+  background: #d8e9ff;
+  color: #04101c;
+  transform: translateY(-2px);
+}
+
+.button-link.secondary {
+  background: transparent;
+  border: 1px solid var(--accent-warm);
+  color: var(--text-main);
+}
+
+.button-link.secondary:hover {
+  background: rgba(77, 183, 255, 0.15);
+}
+
+/* Navigation */
 #NavigationBar {
-  text-align: left;
+  padding: 10px 16px;
 }
 
 #NavigationBar nav {
@@ -191,19 +195,22 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
+  margin: 12px 0 6px;
 }
 
 #NavigationBar nav a {
   display: inline-block;
   padding: 8px 14px;
-  margin: 0;
   border-radius: 999px;
   border: 1px solid rgba(170, 196, 231, 0.2);
   background: rgba(137, 169, 218, 0.09);
   color: #a5d3ff;
   font-size: 0.91rem;
   text-decoration: none;
-  transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    border-color 0.18s ease;
 }
 
 #NavigationBar nav a:hover {
@@ -212,55 +219,16 @@ nav {
   border-color: rgba(77, 183, 255, 0.52);
 }
 
-dt,
-dd {
-  margin-left: 14px;
-}
-
-dt {
-  margin-top: 12px;
-}
-
-dd {
-  margin-bottom: 12px;
-}
-
-/* =================================
-   SKILLS + TAGS
-================================= */
-.skill-bar {
-  margin: 13px 0;
-}
-
-.skill-bar span {
-  display: inline-block;
-  font-weight: 700;
-  color: #f2f9ff;
-}
-
-.bar {
-  height: 11px;
-  margin-top: 7px;
-  overflow: hidden;
-  border-radius: 999px;
-  border: 1px solid rgba(180, 202, 238, 0.2);
-  background: rgba(109, 138, 184, 0.2);
-}
-
-.fill {
-  height: 100%;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-warm));
-  box-shadow: 0 0 16px rgba(77, 183, 255, 0.36);
-}
-
+/* Skills and technology tags */
 .tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
   margin-top: 12px;
 }
 
 .tag {
   display: inline-block;
-  margin: 6px 6px 0 0;
   padding: 7px 13px;
   border-radius: 999px;
   border: 1px solid rgba(185, 207, 245, 0.18);
@@ -268,23 +236,16 @@ dd {
   font-weight: 600;
   color: #ebfbff;
   background: rgba(103, 128, 167, 0.17);
-  transition: transform 0.18s ease, background 0.18s ease;
 }
 
-.tag:hover {
-  background: rgba(77, 183, 255, 0.25);
-  transform: translateY(-1px);
-}
-
-/* =================================
-   CARD GRID SETTINGS
-================================= */
+/* Project and certificate grids */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
   margin-top: 12px;
 }
+
 .workingOn-grid,
 .cert-grid {
   display: grid;
@@ -292,15 +253,29 @@ dd {
   gap: 14px;
   margin-top: 12px;
 }
+
 .workingOn-card,
 .project-card,
 .cert-card {
+  min-width: 0;
   padding: 16px;
   border-radius: 15px;
-  background: linear-gradient(180deg, rgba(143, 172, 219, 0.14), rgba(5, 12, 22, 0.78));
+  background: linear-gradient(
+    180deg,
+    rgba(143, 172, 219, 0.14),
+    rgba(5, 12, 22, 0.78)
+  );
   border: 1px solid rgba(162, 192, 236, 0.24);
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
+
+.project-card:hover,
+.cert-card:hover,
+.workingOn-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(138, 178, 230, 0.6);
+}
+
 .workingOn-card h3,
 .project-card h3,
 .cert-card h3 {
@@ -308,6 +283,25 @@ dd {
   font-size: 1.06rem;
 }
 
+.project-card a,
+.cert-card a {
+  display: inline-block;
+  margin: 12px 12px 0 0;
+}
+
+.featured-project {
+  border-color: var(--accent);
+}
+
+.project-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--accent-warm);
+}
+
+/* Certificates */
 .cert-meta {
   margin: 6px 0;
   font-size: 0.9rem;
@@ -315,12 +309,14 @@ dd {
 }
 
 .cert-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
   margin: 10px 0;
 }
 
 .cert-tag {
   display: inline-block;
-  margin: 0 6px 6px 0;
   padding: 5px 10px;
   border-radius: 999px;
   font-size: 0.74rem;
@@ -329,9 +325,7 @@ dd {
   background: rgba(158, 188, 231, 0.16);
 }
 
-/* =================================
-   SOCIAL ICONS
-================================= */
+/* Social icons */
 .socialWrapper {
   display: flex;
   justify-content: center;
@@ -343,8 +337,6 @@ dd {
   align-items: center;
   justify-content: center;
   gap: 16px;
-  width: fit-content;
-  height: fit-content;
   padding: 16px;
   border-radius: 14px;
   background: var(--surface-strong);
@@ -361,7 +353,10 @@ dd {
   border-radius: 12px;
   border: 1px solid rgba(166, 194, 235, 0.2);
   background-color: rgba(135, 164, 208, 0.12);
-  transition: transform 0.22s ease, background-color 0.22s ease, border-color 0.22s ease;
+  transition:
+    transform 0.22s ease,
+    background-color 0.22s ease,
+    border-color 0.22s ease;
 }
 
 .socialContainer:active {
@@ -385,6 +380,7 @@ dd {
 
 .socialSvg {
   width: 20px;
+  height: 24px;
 }
 
 .socialSvg path {
@@ -395,22 +391,39 @@ dd {
   animation: slide-in-top 0.26s both;
 }
 
-/* Icon slide entrance on hover */
 @keyframes slide-in-top {
-  0% {
+  from {
     transform: translateY(-12px);
     opacity: 0;
   }
-
-  100% {
+  to {
     transform: translateY(0);
     opacity: 1;
   }
 }
 
-/* =================================
-  FEEDBACK FORM
-================================= */
+/* Resume */
+iframe {
+  display: block;
+  max-width: 100%;
+  background: #ffffff;
+  border: none;
+  border-radius: 10px;
+}
+
+.resume-link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* Feedback form */
+#feedback label {
+  display: block;
+}
+
 #feedback input,
 #feedback textarea {
   width: 100%;
@@ -421,8 +434,12 @@ dd {
   border-radius: 10px;
   outline: none;
   color: #f5fbff;
-  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  font: inherit;
   background: rgba(3, 8, 15, 0.78);
+}
+
+#feedback textarea {
+  resize: vertical;
 }
 
 #feedback input:focus,
@@ -435,10 +452,14 @@ dd {
   padding: 10px 18px;
   border: none;
   border-radius: 10px;
-  background: linear-gradient(120deg, var(--accent), var(--accent-warm));
+  background: linear-gradient(
+    120deg,
+    var(--accent),
+    var(--accent-warm)
+  );
   color: #04101c;
+  font: inherit;
   font-weight: 800;
-  letter-spacing: 0.02em;
   cursor: pointer;
   transition: transform 0.18s ease, filter 0.18s ease;
 }
@@ -448,11 +469,14 @@ dd {
   filter: brightness(1.05);
 }
 
-iframe {
-  background: #ffffff;
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-/* Responsive spacing + one-column cards */
+/* Smaller screens */
 @media (max-width: 760px) {
   body {
     padding: 14px 10px;
@@ -460,21 +484,16 @@ iframe {
 
   header,
   footer,
-  #feedback,
   #NavigationBar,
-  #aboutMe,
-  #skills,
-  #certifications,
-  #myProjects,
-  #workingOn,
-  #myResume {
+  main > section {
     margin: 12px auto;
     padding: 17px;
     border-radius: 16px;
   }
 
   .project-grid,
-  .cert-grid {
+  .cert-grid,
+  .workingOn-grid {
     grid-template-columns: 1fr;
   }
 
@@ -482,12 +501,40 @@ iframe {
     gap: 12px;
     padding: 12px;
   }
+
+  #NavigationBar nav a {
+    padding: 8px 11px;
+  }
 }
 
-/* Respect reduced-motion user preference */
+@media (max-width: 400px) {
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .button-link {
+    width: 100%;
+  }
+}
+
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  * {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
     animation: none !important;
     transition: none !important;
+  }
+
+  .project-card:hover,
+  .cert-card:hover,
+  .workingOn-card:hover,
+  .button-link:hover,
+  #NavigationBar nav a:hover {
+    transform: none;
   }
 }
