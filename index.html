@@ -9,6 +9,7 @@
     />
     <title>Gabriel Novoa | Software Development Portfolio</title>
 
+    <script src="theme.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="icon"
@@ -23,7 +24,13 @@
   </head>
 
   <body>
-    <header>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header id="top">
+      <div class="theme-control">
+        <label for="theme-select">Appearance</label>
+        <select id="theme-select"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+      </div>
+      <p class="eyebrow">Houston, TX · Software development</p>
       <h1>Gabriel Novoa</h1>
       <p>
         Computer Science student at University of Houston-Downtown · Graduating
@@ -34,18 +41,7 @@
         development internships and entry-level opportunities.
       </p>
 
-      <div class="hero-actions">
-        <a class="button-link" href="#myProjects">View Projects</a>
-        <a
-          class="button-link secondary"
-          href="pdfFolder/GabrielNovoa_FinalResume.pdf"
-          download
-        >
-          Download Resume
-        </a>
-      </div>
-
-      <div class="socialWrapper">
+<div class="socialWrapper">
         <div class="socialcard">
           <a
             href="https://www.linkedin.com/in/gabriel-novoa972/"
@@ -58,7 +54,7 @@
               <path
                 d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
               />
-            </svg>
+            </svg><span class="social-label">LinkedIn</span>
           </a>
 
           <a
@@ -72,7 +68,7 @@
               <path
                 d="M248 8C111 8 0 119 0 256c0 110 71 203 169 236 12 2 16-5 16-11v-39c-69 15-84-29-84-29-11-28-27-35-27-35-22-15 2-15 2-15 24 2 37 25 37 25 22 37 57 26 71 20 2-16 9-26 16-32-55-6-113-27-113-120 0-27 10-49 25-66-2-6-11-31 2-65 0 0 20-6 66 25 19-5 39-8 59-8s40 3 59 8c46-31 66-25 66-25 13 34 4 59 2 65 16 17 25 39 25 66 0 93-58 114-113 120 9 8 17 23 17 47v70c0 6 4 13 16 11 98-33 169-126 169-236C496 119 385 8 248 8z"
               />
-            </svg>
+            </svg><span class="social-label">GitHub</span>
           </a>
 
           <a
@@ -84,24 +80,28 @@
               <path
                 d="M502.3 190.8L327.4 338c-15.8 13.3-38.9 13.3-54.7 0L9.7 190.8C3.9 186 0 178.9 0 171.3V112c0-26.5 21.5-48 48-48h416c26.5 0 48 21.5 48 48v59.3c0 7.6-3.9 14.7-9.7 19.5zM0 224l187.7 157.9c39.2 32.9 97.4 32.9 136.6 0L512 224v176c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V224z"
               />
-            </svg>
+            </svg><span class="social-label">Email</span>
+          </a>
+          <a class="socialContainer resume" href="pdfFolder/Resume_GabrielNovoa.pdf" download aria-label="Download Resume">
+            <svg viewBox="0 0 24 24" class="socialSvg" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5" fill="none" />
+            </svg><span class="social-label">Resume</span>
           </a>
         </div>
       </div>
     </header>
 
-    <main>
+      <div class="nav-sentinel" aria-hidden="true"></div>
       <div id="NavigationBar">
         <nav aria-label="Portfolio sections">
-          <a href="#aboutMe">About Me</a>
-          <a href="#skills">Skills</a>
-          <a href="#certifications">Certifications</a>
-          <a href="#myProjects">Projects</a>
-          <a href="#workingOn">Currently Working On</a>
-          <a href="#myResume">Resume</a>
+          <a href="#aboutMe">About Me</a><a href="#skills">Skills</a>
+          <a href="#education">Education</a><a href="#experience">Experience</a>
+          <a href="#workingOn">In progress</a><a href="#myProjects">Projects</a>
+          <a href="#certifications">Certifications</a><a href="#myResume">Resume</a>
         </nav>
       </div>
 
+    <main id="main-content" tabindex="-1">
       <section id="aboutMe">
         <h2>About Me</h2>
         <p>
@@ -114,7 +114,8 @@
           My projects include CS Textbook Tutor, an AI-assisted learning
           application built with React, TypeScript, FastAPI, and the OpenAI API,
           and MuscleMetrics, an Android workout tracker built with Java, Room,
-          and SQLite. These projects have given me experience with persistent
+          and SQLite. I’m also developing Store Scout, a grocery-shopping web app.
+          These projects have given me experience with persistent
           storage, API integration, and building features around user needs.
         </p>
         <p>
@@ -158,21 +159,139 @@
           <span class="tag">Android Studio</span>
           <span class="tag">Visual Studio Code</span>
           <span class="tag">SQLite</span>
+          <span class="tag">Firebase Authentication</span>
+          <span class="tag">Cloud Firestore</span>
+          <span class="tag">Visual Studio</span>
         </div>
 
+        <h3>Applied in Projects</h3>
+        <p>Responsive interfaces, API integration, persistent storage, object-oriented
+          programming, semantic retrieval, and AI-assisted development with ChatGPT and Codex.</p>
+
         <h3>Spoken Languages</h3>
-        <p>English · Spanish</p>
+        <p>English (professional proficiency) · Spanish (moderate proficiency)</p>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <p class="timeline-hint">Hover over a milestone, or select its details to explore.</p>
+        <ol class="timeline education-timeline">
+          <li class="timeline-event">
+            <p class="timeline-date"><time datetime="2023-05">May 2023</time> · Graduated</p>
+            <h3>Houston Community College</h3>
+            <p>Associate of Science</p>
+          </li>
+          <li class="timeline-event ongoing">
+            <p class="timeline-date"><time datetime="2026-12">December 2026</time> · Expected graduation</p>
+            <h3>University of Houston-Downtown</h3>
+            <p>Bachelor of Science in Computer Science · In progress</p>
+            <details class="timeline-details">
+              <summary>Relevant coursework</summary>
+              <div class="timeline-detail-content"><ul>
+                <li>Statistical and Machine Learning</li><li>Operating Systems</li><li>Database Systems</li>
+              </ul></div>
+            </details>
+          </li>
+        </ol>
+        <p class="timeline-future"><span aria-hidden="true">→</span> Continuing to learn and grow</p>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+        <p class="timeline-hint">A timeline of my work in Houston, TX. Hover or select a role’s details.</p>
+        <ol class="timeline">
+          <li class="timeline-event ongoing">
+            <p class="timeline-date"><time datetime="2016-01">January 2016</time>–Present · Ongoing</p>
+            <h3>Manager · Nora’s Cleaning Service</h3>
+            <p>Team leadership and operations</p>
+            <details class="timeline-details"><summary>Role details</summary>
+              <div class="timeline-detail-content"><p>Coordinate assignments, monitor work quality and schedules,
+                train team members, communicate client expectations, and resolve day-to-day issues.</p></div>
+            </details>
+          </li>
+          <li class="timeline-event">
+            <p class="timeline-date"><time datetime="2025-04">April 2025</time></p>
+            <h3>Drone Educator · Yates High School</h3>
+            <p>STEM outreach with UHD students</p>
+            <details class="timeline-details"><summary>Workshop details</summary>
+              <div class="timeline-detail-content"><p>Co-led a student workshop introducing drone technology,
+                flight concepts, and real-world applications through hands-on activities.</p></div>
+            </details>
+          </li>
+          <li class="timeline-event">
+            <p class="timeline-date"><time datetime="2025-06">June</time>–<time datetime="2025-07">July 2025</time></p>
+            <h3>Customer Service Associate · H-E-B</h3>
+            <p>Customer service and grocery carry-out</p>
+            <details class="timeline-details"><summary>Role details</summary>
+              <div class="timeline-detail-content"><p>Served 40+ customers per hour with accurate transactions
+                and helped customers load groceries with carry-out service.</p></div>
+            </details>
+          </li>
+          <li class="timeline-event ongoing">
+            <p class="timeline-date"><time datetime="2026-10">October 2026</time>–Present · Ongoing</p>
+            <h3>eCurbie · H-E-B</h3>
+            <p>Curbside grocery fulfillment</p>
+            <details class="timeline-details"><summary>Role details</summary>
+              <div class="timeline-detail-content"><p>Organize and deliver curbside grocery orders, coordinating
+                with teammates for timely, accurate handoffs and helpful customer service.</p></div>
+            </details>
+          </li>
+        </ol>
+        <p class="timeline-future"><span aria-hidden="true">→</span> Open to the next opportunity</p>
+      </section>
+
+      <section id="workingOn">
+        <h2>Currently Working On</h2>
+
+        <div class="workingOn-grid">
+          <article class="workingOn-card">
+            <h3>Portfolio Website Improvements</h3>
+            <p>
+              Improving this portfolio website by refining layout, styling, and
+              user experience while continuing to learn more advanced HTML, CSS,
+              and JavaScript concepts.
+            </p>
+          </article>
+
+          <article class="workingOn-card">
+            <h3>Store Scout · In development</h3>
+            <p>Refining account syncing and product selection, testing the iPhone
+              Shortcut workflow, and researching permitted retailer data sources.</p>
+            <a href="#storeScout">Explore This Project</a><a class="live-project-link" href="https://gabrielnovoa7.github.io/StoreScout/" target="_blank" rel="noopener">Open Store Scout ↗</a>
+          </article>
+        </div>
       </section>
 
       <section id="myProjects">
         <h2>My Projects</h2>
 
         <div class="project-grid">
+          <article class="project-card featured-project" id="storeScout">
+            <span class="project-label">WEB APPLICATION · ONGOING PROJECT</span>
+            <h3>Store Scout</h3>
+            <span class="status-badge">In development</span>
+            <p>A mobile-first grocery-shopping app connecting shopping lists with
+              product selection, price and unit-price comparisons, and checklists
+              organized by store. Includes browser-saved guest lists and Firebase
+              accounts with private cloud lists.</p>
+            <p class="project-note">The Houston pilot uses sample H-E-B and Walmart
+              data. Live retailer pricing and the Apple Reminders Shortcut workflow
+              are still being researched and tested.</p>
+            <p class="project-note">Developed with substantial assistance from ChatGPT
+              and Codex; I guide the product vision, requirements, priorities, and design.</p>
+            <div class="tag-container">
+              <span class="tag">JavaScript</span><span class="tag">HTML &amp; CSS</span>
+              <span class="tag">Firebase Authentication</span><span class="tag">Cloud Firestore</span>
+            </div>
+            <a href="https://github.com/GabrielNovoa7/StoreScout" target="_blank" rel="noopener">View Store Scout on GitHub</a>
+            <a href="https://github.com/GabrielNovoa7/StoreScout#readme" target="_blank" rel="noopener">Read progress &amp; limitations</a>
+          </article>
           <article class="project-card featured-project">
             <span class="project-label">AI &amp; WEB DEVELOPMENT</span>
             <h3>CS Textbook Tutor</h3>
+            <span class="status-badge">In development</span>
             <p>
-              An AI-assisted learning application that uses semantic retrieval
+              An AI-assisted learning application in development that uses semantic retrieval
               and vector embeddings to ground responses in uploaded textbook
               content. Includes PDF processing, persistent chats, practice
               questions, and a Java code playground.
@@ -194,7 +313,8 @@
             </a>
           </article>
 
-          <article class="project-card">
+          </div>
+        <details class="content-disclosure"><summary>Explore More Projects <span aria-hidden="true">↗</span></summary><div class="project-grid"><article class="project-card">
             <span class="project-label">ANDROID DEVELOPMENT</span>
             <h3>MuscleMetrics</h3>
             <p>
@@ -334,8 +454,9 @@
             >
               View Source on GitHub
             </a>
-          </article>
-        </div>
+          </article></div></details>
+
+
       </section>
 
       <section id="certifications">
@@ -343,7 +464,8 @@
         <p>Courses supporting my technical skills and continued learning.</p>
 
         <div class="cert-grid">
-          <article class="cert-card">
+          </div>
+        <details class="content-disclosure"><summary>Browse course certificates</summary><div class="cert-grid"><article class="cert-card">
             <h3>Introduction to Python</h3>
             <p class="cert-meta">Issued by DataCamp</p>
             <p class="cert-meta">Completed: February 2026</p>
@@ -450,59 +572,35 @@
             >
               Verify Credential
             </a>
-          </article>
-        </div>
+          </article></div></details>
+
+
       </section>
 
-      <section id="workingOn">
-        <h2>Currently Working On</h2>
 
-        <div class="workingOn-grid">
-          <article class="workingOn-card">
-            <h3>Portfolio Website Improvements</h3>
-            <p>
-              Improving this portfolio website by refining layout, styling, and
-              user experience while continuing to learn more advanced HTML, CSS,
-              and JavaScript concepts.
-            </p>
-          </article>
-
-          <article class="workingOn-card">
-            <h3>Grocery Store Product Finder (StoreScout)</h3>
-            <p>
-              Building StoreScout, a project focused on helping users locate
-              products or compare store options, while gaining experience with
-              application design and problem solving.
-            </p>
-          </article>
-        </div>
-      </section>
 
       <section id="myResume">
         <h2>My Resume</h2>
 
-        <iframe
-          src="pdfFolder/GabrielNovoa_FinalResume.pdf"
-          width="100%"
-          height="600"
-          title="Gabriel Novoa Resume Preview"
-          loading="lazy"
-        ></iframe>
+        <p>My latest resume includes education, technical projects, and work experience.</p>
+        <div class="resume-preview">
+          <iframe src="pdfFolder/Resume_GabrielNovoa.pdf" width="100%" height="680"
+            title="Gabriel Novoa Resume Preview" loading="lazy"></iframe>
+        </div>
 
         <p class="resume-link">
           <a
-            href="pdfFolder/GabrielNovoa_FinalResume.pdf"
+            href="pdfFolder/Resume_GabrielNovoa.pdf"
             target="_blank"
             rel="noopener"
           >
             Open Resume (PDF)
           </a>
-          <a href="pdfFolder/GabrielNovoa_FinalResume.pdf" download>
+          <a href="pdfFolder/Resume_GabrielNovoa.pdf" download>
             Download Resume
           </a>
         </p>
       </section>
-
       <section id="feedback">
         <h2>Feedback</h2>
         <p>
@@ -543,6 +641,7 @@
 
     <footer>
       <p>Thank you for visiting!</p>
+      <a href="#top">Back to top ↑</a>
       <nav class="footer-links" aria-label="Social links">
         <a
           href="https://www.linkedin.com/in/gabriel-novoa972/"
@@ -561,5 +660,6 @@
         <a href="mailto:Novoa.Gabriel@outlook.com">Email</a>
       </nav>
     </footer>
+    <script src="script.js" defer></script>
   </body>
 </html>
