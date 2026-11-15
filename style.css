@@ -823,3 +823,14 @@ header { margin-top: 0; padding-top: 20px; }
     80%, 100% { opacity: 1; box-shadow: 0 0 0 14px color-mix(in srgb, var(--accent-warm) 0%, transparent); }
   }
 }
+
+/* Project demo videos: desktop video on wide screens, mobile video on phones */
+.project-demos { width: 96%; align-self: center; margin: 14px 0; }
+.project-demos .demo { margin: 0; }
+.project-demos video { display: block; width: 100%; border-radius: 10px; border: 1px solid var(--border); background: #000; }
+.project-demos figcaption { display: none; }
+.project-demos .demo-mobile { display: none; }
+@media (max-width: 600px) {
+  .project-demos .demo-desktop { display: none; }
+  .project-demos .demo-mobile { display: block; max-width: 260px; margin: 0 auto; }
+}
